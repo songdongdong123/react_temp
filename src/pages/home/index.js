@@ -7,14 +7,16 @@ import { connect } from 'react-redux';
 )
 export default class Home extends React.Component {
   componentDidMount () {
-    console.log(this.props)
+    // console.log(this.props)
   }
   render () {
     return (
       <div>
         <span className="icon-wenhao"></span>
         <p className="test">P{this.props.a}</p>
-        <b>dddddd</b>
+        <b onClick={() => {
+          this.props.history.push('/page2')
+        }}>dddddd</b>
       </div>
     )
   }

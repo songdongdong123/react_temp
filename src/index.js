@@ -6,6 +6,7 @@ import store from './redux';
 import './config';
 import './common/stylus/index.styl';
 import './common/stylus/mixin.styl';
+import './reset.css';
 
 ReactDOM.render(
 <Provider store = {store}>

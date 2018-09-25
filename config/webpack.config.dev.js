@@ -213,11 +213,19 @@ module.exports = {
         use:  [
           require.resolve('style-loader'),
           require.resolve('css-loader'),
-          require.resolve('stylus-loader', {
-            import: [
-              path.join(__dirname, "../src/common/stylus/mixin.styl"), // variables.styl全局变量文件
-            ]
-          })
+          require.resolve('stylus-loader'),
+          {
+            loader: require.resolve('stylus-loader'),
+            options: {
+              import: [
+                path.join(__dirname, "../src/common/stylus/index.styl")
+              ],
+              paths: [
+                path.join(__dirname, "../src/common/"),
+                path.join(__dirname, "../"),
+              ]
+            }
+          }
         ]
       }
     ],

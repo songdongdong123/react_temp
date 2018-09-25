@@ -9,8 +9,8 @@ const renderRouteComponent = routes => routes.map((route, index) => {
 
 const setTitle = ({location, history}) => {
   // 设置title
-  const pathname = location.pathname
-  console.log(pathname)
+  // const pathname = location.pathname
+  // console.log(pathname)
 }
 
 const NotLoyoutRouter = renderRouteComponent(noLayoutRouteMap);

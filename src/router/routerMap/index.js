@@ -1,5 +1,4 @@
 import asyncComponent from '../asyncComponent';
-import NotFound from '../404';
 const _import_views = file => asyncComponent(() => import(`../../pages/${file}`));
 
 // 包含layout视图
@@ -10,6 +9,18 @@ export const layoutRouteMap = [
     name: 'home',
     exact: true,
     component: _import_views('home/index')
+  },
+  {
+    path: '/shopmell',
+    name: 'home',
+    exact: true,
+    component: _import_views('shopmell/index')
+  },
+  {
+    path: '/usercenter',
+    name: 'home',
+    exact: true,
+    component: _import_views('usercenter/index')
   }
 ]
 
@@ -29,6 +40,6 @@ export const noLayoutRouteMap = [
   {
     path: '/404',
     name: '404',
-    component: NotFound
+    component: _import_views('noMatch/index')
   },
 ]
