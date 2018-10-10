@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import store from './redux';
 import './config';
 import './common/stylus/index.styl';
-import './common/stylus/mixin.styl';
+import './common/stylus/icon.styl';
 import './reset.css';
 
 ReactDOM.render(
